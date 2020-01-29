@@ -1,0 +1,19 @@
+#block {
+  margin-top: 40%;
+  width: 95%;
+  margin-right: 2%;
+  margin-left: 2%;
+}
+#presentaion {
+  margin-top: 20%;
+  text-align: center;
+}
+body {
+  background-image: url("bg.jpg");
+}
+#blockn {
+  text-align: center;
+  background-color: white;
+  filter: progid:DXImageTransform.Microsoft.Shadow(color='#aaaaaa', Direction=135, Strength=12);
+  zoom: 1;
+}
