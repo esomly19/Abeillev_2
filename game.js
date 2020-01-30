@@ -1,2 +1,2 @@
-var pseudo;
-var score;
+var pseudo = "";
+var score = 0;
