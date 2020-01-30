@@ -3,7 +3,7 @@ import QrScanner from './qr-scanner.min.js';
 
 QrScanner.WORKER_PATH = './qr-scanner-worker.min.js';
 // Set constraints for the video stream
-const constraints = {video: {facingMode: "environment"}, audio: false};// Define constants
+const constraints = {video: {width: {max:800},height:{max:380},facingMode: "environment"}, audio: false};// Define constants
 const cameraView = document.querySelector("#camera--view"),
     cameraOutput = document.querySelector("#camera--output"),
     cameraSensor = document.querySelector("#camera--sensor"),
@@ -27,9 +27,10 @@ window.addEventListener("load", () => {
         qrScanner.destroy();
         fetch('http://localhost:19080/fleurs/'+result).then((result) => {
             result.json().then((result) => {
-                console.log(result[0].n_fr);
-
-                // window.location.href="http://51.158.67.211:19080/fleurs/"+result[0].id;
+                console.log(result[0]);
+                score += result[0].nectar * result[0].pollen;
+                console.log(score);
+                // window.location.href="./map.html";
             })
         });
     });
