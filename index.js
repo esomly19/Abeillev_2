@@ -1,5 +1,10 @@
 import QrScanner from "./qr-scanner.min.js";
-var score = 0;
+if(localStorage.getItem("score")){
+  var score = Number(localStorage.getItem("score"));
+}
+else {
+  var score = 0;
+}
 
 QrScanner.WORKER_PATH = "./qr-scanner-worker.min.js";
 // Set constraints for the video stream
@@ -46,9 +51,9 @@ window.addEventListener(
         qrScanner.destroy();
         fetch("http://localhost:19080/fleurs/" + result).then(result => {
           result.json().then(result => {
-            score += result[0].nectar * result[0].pollen;
             console.log(result);
             score += result.nectar * result.pollen;
+            localStorage.setItem('score', score);
             sessionStorage.setItem("score", score);
             var x = setTimeout(showPage, 5000);
             console.log(score);
