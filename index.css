@@ -12,7 +12,9 @@ body {
   background-image: url("bg.jpg");
 }
 #blockn {
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   background-color: white;
   filter: progid:DXImageTransform.Microsoft.Shadow(color='#aaaaaa', Direction=135, Strength=12);
   zoom: 1;
