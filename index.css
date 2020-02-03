@@ -10,6 +10,9 @@
 }
 body {
   background-image: url("bg.jpg");
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 #blockn {
   display: flex;
@@ -21,8 +24,8 @@ body {
 }
 #map {
   /* la carte DOIT avoir une hauteur sinon elle n'apparaît pas */
-  min-height: 600px;
-  height: 80%;
+  /* min-height: 600px; */
+  height: 100%;
 }
 #overlay {
   position: fixed; /* Sit on top of the page content */
