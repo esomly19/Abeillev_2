@@ -46,8 +46,9 @@ window.addEventListener(
         qrScanner.destroy();
         fetch("http://localhost:19080/fleurs/" + result).then(result => {
           result.json().then(result => {
-            console.log(result[0]);
             score += result[0].nectar * result[0].pollen;
+            console.log(result);
+            score += result.nectar * result.pollen;
             sessionStorage.setItem("score", score);
             var x = setTimeout(showPage, 5000);
             console.log(score);
