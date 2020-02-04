@@ -56,3 +56,12 @@ body {
   width: 100%;
   text-decoration: none;
 }
+.panel-body{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.panel-body > a{
+  margin: .3em;
+}
