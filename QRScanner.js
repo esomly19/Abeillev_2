@@ -43,7 +43,7 @@ window.addEventListener(
       document.getElementById("camera--view"),
       result => {
         qrScanner.destroy();
-        fetch("http://localhost:19080/fleurs/" + result).then(result => {
+        fetch("http://51.158.67.211:19080/fleurs/" + result).then(result => {
           result.json().then(result => {
             console.log(result);
             score += result.nectar * result.pollen;
