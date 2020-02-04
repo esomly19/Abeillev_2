@@ -46,6 +46,7 @@ window.addEventListener(
             localStorage.setItem('score', score);
             // var x = setTimeout(showPage, 5000);
             $('body').append($('<div>', {class: 'flower'})
+            .append($('<h2>', {text: 'Vous gagnez: ' + result.nectar * result.pollen + ' points'}))
             .append($('<img>', {src: 'http://51.158.67.211:19080/fleurs/' + result.id + '/img'}))
             .append($('<h2>', {text: result.n_fr})))
             console.log(score);
