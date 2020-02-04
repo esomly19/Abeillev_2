@@ -13,5 +13,5 @@ console.log(localStorage.getItem("pseudo"));
 // document.getElementById("blockn").append(localStorage.getItem("pseudo"));
 
 $('#blockn').append($('<div>', {text: 'Score: ' + localStorage.getItem("score")}));
-$('#blockn').append($('<div>', {text: localStorage.getItem('pseudo')}));
-$('#blockn').append($('<div>', {text: 'Temps restant: '}));
+// $('#blockn').append($('<div>', {text: localStorage.getItem('pseudo')}));
+// $('#blockn').append($('<div>', {text: 'Temps restant: '}));
