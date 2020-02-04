@@ -174,7 +174,3 @@ function initMap() {
   polygon18.bindPopup("L'observatoire des pollens");
   polygon19.bindPopup("La prairie lorraine");
 }
-window.onload = function() {
-  // Fonction d'initialisation qui s'exécute lorsque le DOM est chargé
-  initMap();
-};
