@@ -1,9 +1,10 @@
 import QrScanner from "./qr-scanner.min.js";
-if(localStorage.getItem("score")){
+if(localStorage.getItem("score") != null){
   var score = Number(localStorage.getItem("score"));
 }
 else {
   var score = 0;
+  localStorage.setItem("score", score);
 }
 
 QrScanner.WORKER_PATH = "./qr-scanner-worker.min.js";
