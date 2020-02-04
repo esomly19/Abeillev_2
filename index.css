@@ -65,3 +65,15 @@ body {
 .panel-body > a{
   margin: .3em;
 }
+
+.flower{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5000;
+}
+
+.flower > h2{
+  text-align: center;
+}

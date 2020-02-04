@@ -25,15 +25,11 @@ function cameraStart() {
       console.error("Oops. Something is broken.", error);
     });
 }
-var myVar;
-
-function myFunction() {
-  myVar = setTimeout(showPage, 3000);
-}
 
 function showPage() {
-  window.location.href = "./map.html";
+  window.location.href = "./index.html";
 }
+
 window.addEventListener(
   "load",
   () => {
@@ -48,8 +44,10 @@ window.addEventListener(
             console.log(result);
             score += result.nectar * result.pollen;
             localStorage.setItem('score', score);
-            sessionStorage.setItem("score", score);
-            var x = setTimeout(showPage, 5000);
+            // var x = setTimeout(showPage, 5000);
+            $('body').append($('<div>', {class: 'flower'})
+            .append($('<img>', {src: 'http://51.158.67.211:19080/fleurs/' + result.id + '/img'}))
+            .append($('<h2>', {text: result.n_fr})))
             console.log(score);
           });
         });
