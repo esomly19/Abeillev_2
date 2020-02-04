@@ -5,9 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, user-scalable=no" />
   <link rel="stylesheet" href="index.css" />
-
+  <script src="js/pinch-zoom.js"></script>
   <title>Test Lecture QRCode</title>
-  <html>
 
   <head>
     <meta charset="utf-8" />
@@ -16,14 +15,30 @@
     <title>Carte</title>
   </head>
 
-<body style="display: block">
-  <div id="back">
-    <a href="map.html"><button id="buut"> Retour</button></a>
+<body style="display: block; background: white;">
+
+  <div class="page pinch-zoom-parent" id="element">
+    <div class="pinch-zoom">
+        <img style="width: 1238px; height: 878px" src="carte.png" />
+    </div>
   </div>
-  <img src="carte.png" />
+
+  <div id="back">
+    <a href="map.html">Retour</a>
+  </div>
+
 
 </body>
 
-</html>
+
+
+<script type="text/javascript">
+  window.onload = function(){
+
+      var el = document.querySelector('#element');
+      new PinchZoom.default(el, {});
+
+  }
+</script>
 
 </html>
